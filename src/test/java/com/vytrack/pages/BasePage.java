@@ -23,7 +23,7 @@ public abstract class BasePage {
     public WebElement shortcut;
 
     @FindBy(xpath = "//i[@class='fa-question-circle']")
-    public WebElement questions;
+    public WebElement helpLink;
 
     @FindBy(xpath = "//i[@class='fa-bars']")
     public WebElement menu;
@@ -42,5 +42,9 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//h1[@class='oro-subtitle']")
     public WebElement oroSubtitle;
+
+    @FindBy(xpath = "//div/a[@href='/pinbar/help']")
+    public WebElement pinbarHelp;
+
 
 }

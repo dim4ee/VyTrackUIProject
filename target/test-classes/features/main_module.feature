@@ -25,7 +25,7 @@ Feature: As a user, I should be accessing all the main modules of the app
       | Reports & Segments |
       | System             |
 
-  @wip
+
   Scenario: login as a store manager and assert there is 8 module
     When user login as a store manager
     Then assert module names:
