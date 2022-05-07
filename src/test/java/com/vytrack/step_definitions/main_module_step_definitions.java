@@ -20,6 +20,7 @@ public class main_module_step_definitions {
     @Given("user login as a driver")
     public void user_login_as_a_driver() {
         VytrackUtils.loginAsDriver();
+        VytrackUtils.waitTillLoaderMaskDisappear();
     }
 
     @Then("assert module names:")
@@ -35,10 +36,12 @@ public class main_module_step_definitions {
     @When("user login as a sales manager")
     public void userLoginAsASalesManager() {
         VytrackUtils.loginAsSalesManager();
+        VytrackUtils.waitTillLoaderMaskDisappear();
     }
 
     @When("user login as a store manager")
     public void userLoginAsAStoreManager() {
         VytrackUtils.loginAsStoreManager();
+        VytrackUtils.waitTillLoaderMaskDisappear();
     }
 }
