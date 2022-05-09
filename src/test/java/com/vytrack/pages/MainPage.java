@@ -20,5 +20,8 @@ public class MainPage extends BasePage {
     @FindBy(xpath = "//div[@class='clearfix']//a[@href='/contact/create']")
     public WebElement createContact;
 
+    @FindBy(className = "message")
+    public WebElement alertMessage;
+
 
 }

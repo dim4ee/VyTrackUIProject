@@ -16,6 +16,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[@class='title title-level-1']")
     public List<WebElement> modules;
 
+    @FindBy(xpath = "//span[@class='title title-level-2']")
+    public List<WebElement> modulesDropdowns;
+
     @FindBy(xpath = "//h1[@class='logo logo-text']")
     public WebElement pageLogo;
 

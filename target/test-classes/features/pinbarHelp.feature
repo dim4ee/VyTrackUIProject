@@ -10,7 +10,7 @@ Feature: As a user, I want to learn how to use the pinbar.
   Expected source:
   /bundles/oronavigation/images/pinbar-location.jpg
 
-@wip
+
   Scenario: When Driver click on the pinbar help should see:
   “How To Use Pinbar”,
   “Use pin icon on the right top corner of the page to create fast access link in the pinbar.”,
@@ -20,7 +20,7 @@ Feature: As a user, I want to learn how to use the pinbar.
     Then user should see header "How To Use Pinbar"
     And  user should see paragraph "Use pin icon on the right top corner of page to create fast access link in the pinbar."
     And  user should see a picture displayed with src = "/bundles/oronavigation/images/pinbar-location.jpg"
-  @wip
+
   Scenario: When Sales Manager click on the pinbar help should see:
   “How To Use Pinbar”,
   “Use pin icon on the right top corner of the page to create fast access link in the pinbar.”,
@@ -30,7 +30,7 @@ Feature: As a user, I want to learn how to use the pinbar.
     Then user should see header "How To Use Pinbar"
     And  user should see paragraph "Use pin icon on the right top corner of page to create fast access link in the pinbar."
     And  user should see a picture displayed with src = "/bundles/oronavigation/images/pinbar-location.jpg"
-  @wip
+
   Scenario: When Store Manager click on the pinbar help should see:
   “How To Use Pinbar”,
   “Use pin icon on the right top corner of the page to create fast access link in the pinbar.”,
