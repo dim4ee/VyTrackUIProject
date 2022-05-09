@@ -13,10 +13,10 @@ public class VehiclePage extends BasePage{
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "(//div[@class='more-bar-holder'])[1]/div/a")
+    @FindBy(xpath = "(//td[@class='action-cell grid-cell grid-body-cell'][1])[1]")
     public WebElement firstRoll3dots;
 
-    @FindBy(xpath = "(//div[@class='more-bar-holder'])[1]//li[@class='launcher-item']/a")
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu detach dropdown-menu__floating']//a")
     public List<WebElement> firstRoll3dotsDropdown;
     
     

@@ -41,11 +41,8 @@ public class Test {
 
         BrowserUtils.sleep(3);
 
-        for (WebElement option : vehiclePage.firstRoll3dotsDropdown) {
-
-            System.out.println(option.getAttribute("title"));
-
-        }
+        System.out.println(Driver.getDriver().findElement(By.xpath("//*[@id=\"grid-custom-entity-grid-1937039966\"]/div[2]/div[2]/div[2]/div/table/tbody/tr[1]/td[20]/div/div/ul/li/ul/li[1]/a"))
+                .getAttribute("title"));
 
 
     }

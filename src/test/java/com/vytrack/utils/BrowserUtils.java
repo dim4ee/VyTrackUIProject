@@ -94,6 +94,12 @@ for given duration
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
 
+    //waituntilVisibilityOfElement(WebElement element,int timeout) method
+    public static void waituntilVisibilityOfElement(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     //doubleClick(WebElement element) method
     public static void doubleClick(WebElement element) {
         new Actions(Driver.getDriver()).doubleClick(element).perform();
