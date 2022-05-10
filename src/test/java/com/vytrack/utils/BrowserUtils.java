@@ -99,6 +99,11 @@ for given duration
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    //waitUntilElementIsClickable(WebElement element,int timeout) method
+    public static void waitUntilElementIsClickable(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
 
     //doubleClick(WebElement element) method
     public static void doubleClick(WebElement element) {

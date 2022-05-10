@@ -18,6 +18,12 @@ public class VehiclePage extends BasePage{
 
     @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu detach dropdown-menu__floating']//a")
     public List<WebElement> firstRoll3dotsDropdown;
+
+    @FindBy(xpath = "//th//input[@type='checkbox']")
+    public WebElement selectAllCheckbox;
+
+    @FindBy(xpath = "//tbody//input[@type='checkbox']")
+    public List<WebElement> listOfAllCheckBoxes;
     
     
 
