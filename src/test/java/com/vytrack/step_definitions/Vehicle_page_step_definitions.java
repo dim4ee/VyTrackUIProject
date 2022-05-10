@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import com.vytrack.pages.VehiclePage;
 import com.vytrack.utils.BrowserUtils;
 import com.vytrack.utils.Driver;
+import com.vytrack.utils.VytrackUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,8 +24,7 @@ public class Vehicle_page_step_definitions {
 
     @And("user hover the three dots ... on the first roll")
     public void userHoverTheThreeDotsOnTheFirstRoll() {
-        BrowserUtils.scrollToElement(vehiclePage.firstRoll3dots);
-        BrowserUtils.sleep(2);
+        VytrackUtils.waitTillLoaderMaskDisappear();
         BrowserUtils.hover(vehiclePage.firstRoll3dots);
 
 

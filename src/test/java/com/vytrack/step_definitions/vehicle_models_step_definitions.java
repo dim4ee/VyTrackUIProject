@@ -4,6 +4,7 @@ import com.vytrack.pages.MainPage;
 import com.vytrack.pages.VehicleModelsPage;
 import com.vytrack.utils.BrowserUtils;
 import com.vytrack.utils.Driver;
+import com.vytrack.utils.VytrackUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -21,11 +22,15 @@ public class vehicle_models_step_definitions {
     @When("user go to {string} and open {string}")
     public void userGoToAndOpen(String module, String dropdown) {
 
+        VytrackUtils.waitTillLoaderMaskDisappear();
+
         for (WebElement eachModule : mainPage.modules) {
 
             if(eachModule.getText().equalsIgnoreCase(module)){
                 Actions actions = new Actions(Driver.getDriver());
                 actions.moveToElement(eachModule).perform();
+
+                VytrackUtils.waitTillLoaderMaskDisappear();
 
                 for (WebElement modulesDropdown : mainPage.modulesDropdowns) {
 

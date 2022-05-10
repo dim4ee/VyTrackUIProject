@@ -4,7 +4,7 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
   AC #2: user should see an error message “This value should not be blank.” when
   the Calendar event repeat field is cleared(delete the number 1).
 
-  @calEvent @wip
+
   Scenario:Driver create a recurring(repetitive) calendar event
     Given user login as a driver
     When user go to "Activities" and open "Calendar Events"
@@ -14,7 +14,7 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
     When user leave blank repeat entry input
     Then user should see alert message "This value should not be blank."
 
-  @calEvent @wip
+
   Scenario:Sales Manager create a recurring(repetitive) calendar event
     Given user login as a sales manager
     When user go to "Activities" and open "Calendar Events"
@@ -24,7 +24,7 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
     When user leave blank repeat entry input
     Then user should see alert message "This value should not be blank."
 
-  @calEvent @wip
+
   Scenario:Store Manager create a recurring(repetitive) calendar event
     Given user login as a store manager
     When user go to "Activities" and open "Calendar Events"
