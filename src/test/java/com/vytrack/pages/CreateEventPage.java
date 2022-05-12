@@ -23,7 +23,10 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//body[@id='tinymce']/p")
     public WebElement descriptionInput;
 
-    @FindBy(xpath = "//div[@class='controls recurrence-subview-control__items']//input[@class='recurrence-subview-control__number']")
+    @FindBy(xpath = "//iframe[starts-with(@id,'oro_calendar_event')]")
+    public WebElement iframeId;
+
+    @FindBy(xpath = "//div[@data-name='control-sections']//input[@value='1']")
     public WebElement repeatDaysInputBox;
 
     @FindBy(xpath = "//span[@title='Use calendar color']")
@@ -56,7 +59,7 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
     public WebElement repeatCheckbox;
 
-    @FindBy(xpath = "//span/span/span[.='This value should not be blank.']")
+    @FindBy(xpath = "//span[@class='validation-failed']/span/span")
     public WebElement repeatDaysValidationError;
 
     @FindBy(xpath = "//input[@name='oro_calendar_event_form[use_hangout]']")
@@ -64,4 +67,6 @@ public class CreateEventPage extends BasePage{
 
     @FindBy(id = "s2id_autogen1")
     public WebElement addContent;
+
+
 }

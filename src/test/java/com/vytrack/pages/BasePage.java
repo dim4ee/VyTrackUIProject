@@ -49,5 +49,8 @@ public abstract class BasePage {
     @FindBy(xpath = "//div/a[@href='/pinbar/help']")
     public WebElement pinbarHelp;
 
+    @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
+    public WebElement vehicleOdometerErrorMessage;
+
 
 }

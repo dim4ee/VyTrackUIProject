@@ -110,4 +110,19 @@ for given duration
         new Actions(Driver.getDriver()).doubleClick(element).perform();
 
     }
+
+    //switch to iframe method
+    public static void switchToIframe(WebElement element) {
+        Driver.getDriver().switchTo().frame(element);
+
+    }
+
+    //switch to parent frame
+    public static void switchToParentFrame() {
+        Driver.getDriver().switchTo().parentFrame();
+
+    }
+
+
+
 }

@@ -13,6 +13,10 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
     Then user should see 1 by default in the repeat entry input
     When user leave blank repeat entry input
     Then user should see alert message "This value should not be blank."
+    When user enter "-1" in repeat entry input
+    Then user should see alert message "The value have not to be less than 1."
+    When user enter "100" in repeat entry input
+    Then user should see alert message "The value have not to be more than 99."
 
 
   Scenario:Sales Manager create a recurring(repetitive) calendar event
@@ -23,6 +27,10 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
     Then user should see 1 by default in the repeat entry input
     When user leave blank repeat entry input
     Then user should see alert message "This value should not be blank."
+    When user enter "-1" in repeat entry input
+    Then user should see alert message "The value have not to be less than 1."
+    When user enter "100" in repeat entry input
+    Then user should see alert message "The value have not to be more than 99."
 
 
   Scenario:Store Manager create a recurring(repetitive) calendar event
@@ -33,3 +41,7 @@ Feature: As a user, I want to create a recurring(repetitive) calendar event.
     Then user should see 1 by default in the repeat entry input
     When user leave blank repeat entry input
     Then user should see alert message "This value should not be blank."
+    When user enter "-1" in repeat entry input
+    Then user should see alert message "The value have not to be less than 1."
+    When user enter "100" in repeat entry input
+    Then user should see alert message "The value have not to be more than 99."

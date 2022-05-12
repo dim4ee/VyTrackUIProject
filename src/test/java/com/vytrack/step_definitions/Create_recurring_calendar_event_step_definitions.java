@@ -37,4 +37,9 @@ public class Create_recurring_calendar_event_step_definitions {
         Assert.assertEquals(createEventPage.repeatDaysValidationError.getText(),expectedAlertMessage);
     }
 
+    @When("user enter {string} in repeat entry input")
+    public void userEnterInRepeatEntryInput(String input) {
+        createEventPage.repeatDaysInputBox.clear();
+        createEventPage.repeatDaysInputBox.sendKeys(input);
+    }
 }
