@@ -17,4 +17,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./cucumber_report  # Path to the directory containing the Cucumber report
+        publish_dir: ./target/cucumber # Path to the directory containing the Cucumber report
