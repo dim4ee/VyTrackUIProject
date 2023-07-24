@@ -1,29 +1,26 @@
-name: Cucumber Report to GitHub Pages
-
+name: Run Selenium Tests
 on:
-  push:
-    branches:
-      - master
-      
+  workflow_dispatch:
+
 jobs:
-  build-and-report:
-    runs-on : ubuntu-latest
-    
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/setup-java@v1
-      with:
-        java-version: '11'
-        
-    - name: Build with Maven
-      run: mvn clean test
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+          cache: maven
+      - name: Test with Maven
+        run: mvn test --file pom.xml
+      - uses: deblockt/cucumber-report-annotations-action@v1.7
       
-    - name: Generate Cucumber Report
-      run: mvn site
-      
-    - name: Deploy to Github Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: $ {{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./target/cucumber/cucumber-html-reports
-    
+      - name: Deploy Cucumber Reports to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./targer/cucumber/cucumber-html-reports
