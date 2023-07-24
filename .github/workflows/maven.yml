@@ -16,10 +16,10 @@ jobs:
         java-version: '11'
         
     - name: Build with Maven
-      run: mnv clean test
+      run: mvn clean test
       
     - name: Generate Cucumber Report
-      run: mnv site
+      run: mvn site
       
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
