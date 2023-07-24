@@ -3,7 +3,7 @@ name: Cucumber Report to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust this based on your repository's main branch name
+      - master # Adjust this based on your repository's main branch name
 
 jobs:
   build:
